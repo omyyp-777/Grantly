@@ -80,3 +80,9 @@ The interface uses a small set of purpose-driven motion libraries:
 - **Framer Motion** — page transitions, dialogs, and layout transitions.
 
 Install the added dependencies with `npm install`, then run `npm run build` before deployment. All motion respects `prefers-reduced-motion`; the experience remains usable without relying on animation.
+
+## v2.0 improvement pass
+
+See [IMPLEMENTATION-CHANGELOG.md](./IMPLEMENTATION-CHANGELOG.md) for the implemented requirements and frontend-only boundaries. The Scholarship Passport now has editable profile fields and a live completeness metric; indicative scholarship matches recalculate from profile and displayed eligibility text; and applications can be removed from the tracker. Responsive and keyboard-focus styling has also been strengthened.
+
+**Important:** scholarship listings and eligibility descriptions remain illustrative demo content. Match percentages are heuristic guidance only, not official eligibility decisions. The document vault is a browser-persisted checklist, not secure file storage.

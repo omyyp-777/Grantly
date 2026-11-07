@@ -154,3 +154,19 @@ html.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .hero-panel.reveal-on-scroll{overflow:hidden}
 @media(hover:none),(max-width:760px){.tilt-shell{transform:none!important}.tilt-shell .scholar-card{will-change:auto}}
 @media(prefers-reduced-motion:reduce){.reveal-on-scroll{opacity:1!important;visibility:visible!important;transform:none!important}.tilt-shell{transform:none!important}}
+
+/* GRANTLY v2.0: editable passport, clear focus and resilient small screens */
+.profile-edit-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:20px}
+.profile-edit-form label{display:flex;flex-direction:column;gap:6px;color:#77788e;font-size:10px;font-weight:700}
+.profile-edit-form input,.profile-edit-form select{width:100%;min-width:0;border:1px solid #e8e8f0;border-radius:8px;padding:10px 11px;background:#fbfbfe;color:#34344f;font-size:11px;outline:none;transition:border-color .18s,box-shadow .18s}
+.profile-edit-form input:focus,.profile-edit-form select:focus{border-color:#8879ed;box-shadow:0 0 0 3px #8879ed20}
+.profile-edit-form .full-btn{grid-column:1/-1;margin-top:5px}
+.match-breakdown{display:grid;gap:10px;margin:18px 0}
+.match-breakdown>div{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid #eeeef5;font-size:10px;color:#77788e}
+.match-breakdown b{color:#399b79;font-size:12px;white-space:nowrap}
+.remove-app-btn{border:1px solid #f0e5e8;background:#fff8fa;color:#c46b82;border-radius:7px;padding:7px;display:inline-grid;place-items:center}
+.remove-app-btn:hover{background:#ffedf1;border-color:#e9bdc9}
+button:focus-visible,a:focus-visible,[role=button]:focus-visible{outline:3px solid #8879ed70;outline-offset:3px}
+@media(max-width:1100px){.content{padding-left:25px;padding-right:25px}.topbar{padding:0 25px}.scholar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.content{padding:22px 15px 18px}.topbar{height:62px;padding:0 14px}.search-global input{width:min(28vw,130px)}.search-global kbd{display:none}.top-actions{gap:9px}.welcome-row{align-items:flex-start;gap:14px;flex-direction:column}.welcome-row h1,.page-intro h1{font-size:25px}.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.scholar-grid{grid-template-columns:minmax(0,1fr)}.hero-panel{min-height:250px;height:auto;padding:22px}.hero-art{opacity:.35;right:-90px;transform:scale(.8)}.section-heading{align-items:flex-start;gap:8px;flex-direction:column}.passport-layout,.docs-layout,.insights-grid,.bottom-grid{grid-template-columns:minmax(0,1fr)}.profile-edit-form{grid-template-columns:1fr}.profile-edit-form .full-btn{grid-column:auto}.table-wrap{overflow-x:auto}.table-wrap table{min-width:760px}.discover-toolbar{gap:8px}.discover-search{min-width:0;flex:1}.discover-search input{width:100%;min-width:0}.page-intro{margin-bottom:20px}}
+@media(max-width:380px){.stats-grid{grid-template-columns:1fr}.topbar .breadcrumb{font-size:10px}.notification{display:none}}
