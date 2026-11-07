@@ -82,7 +82,17 @@ export default function App() {
   }
   const toggleSave = (id:number) => { const removing=saved.includes(id); const next = removing ? saved.filter(x=>x!==id) : [...saved,id]; setSaved(next); persist('grantly-saved',next); toast(removing?'Removed from your shortlist':'Saved to your shortlist',{description:removing?'You can add it again anytime.':'Your opportunity is safely on your list.'}) }
   const addApplication = (s:Scholarship) => {
-    if (!apps.some(a=>a.id===s.id)) { const next=[...apps,{id:s.id,scholarship:s.name,provider:s.provider,amount:s.amount,status:'Saved',deadline:s.deadline}]; setApps(next); persist('grantly-applications',next) }
+    if (!apps.some(a=>a.id===s.id)) { const next: Application[] = [
+  ...apps,
+  {
+    id: s.id,
+    scholarship: s.name,
+    provider: s.provider,
+    amount: s.amount,
+    status: 'Saved',
+    deadline: s.deadline
+  }
+]; setApps(next); persist('grantly-applications',next) }
     if (!saved.includes(s.id)) toggleSave(s.id)
     toast.success('Added to your application tracker',{description:s.name})
   }
